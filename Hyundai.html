@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hyundai G80</title>
+    <script src="big.js" type="text/javascript"></script>
+
+  </head>
+  <style>
+       .pdiv {
+        display: flex;
+        justify-content: space-between;
+        background-color: #7FC03D;
+      }
+      .logo {
+        height: 70px;
+        padding-left: 30px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+      #ppdiv{
+        margin-top: 25px;
+        margin-right: 100px;
+      }
+      #ac {
+        padding-top: 25px;
+        margin-left: 50px;
+        text-decoration: none;
+        color: rgb(76, 72, 72);
+        margin-right: 50px;
+      }
+      #l1{
+        background-color: white;
+        margin-left: 50px;
+        margin-right: 560px;
+        font-size: 0.4rem;
+        padding-right: 33px;
+        color: white;
+        display: none;
+        margin-top: 7px;
+      }
+
+      #l2{
+        background-color: white;
+        margin-left: 200px;
+        margin-right: 400px;
+        font-size: 0.4rem;
+        padding-right: 43px;
+        color: white;
+        display: none;
+        margin-top: 7px;
+      }
+
+      #l3{
+        background-color: white;
+        margin-left: 363px;
+        margin-right: 197px;
+        font-size: 0.4rem;
+        padding-right: 71px;
+        color: white;
+        display: none;
+        margin-top: 7px;
+      }
+
+      #l4{
+        background-color: white;
+        margin-left: 564px;
+        margin-right: 50px;
+        font-size: 0.4rem;
+        padding-right: 32px;
+        color: white;
+        display: none;
+        margin-top: 7px;
+      }
+
+      #rnav {
+        color: white;
+        display: none;
+      }
+
+      #srnav {
+        color: white;
+        display: none;
+      }
+
+      #rlist {
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        height: 100%;
+        font-size: 1.1rem;
+        background-color: #e2e4e6 0.5;
+        backdrop-filter: blur(20px);
+      }
+
+      .Links {
+        display: none;
+        flex-direction: column;
+        margin: auto;
+      }
+
+      @media (max-width: 768px) {
+      .pdiv {
+        display: flex;
+        justify-content: space-between;
+        background-color: #7FC03D;
+        padding: 5px;
+      }
+      .logo {
+        height: 50px;
+        padding-left: 30px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+      #ppdiv{
+        margin-top: 25px;
+        margin-right: 100px;
+        display: none;
+      }
+      #ac {
+        padding-top: 25px;
+        margin-left: 50px;
+        text-decoration: none;
+        color: rgb(76, 72, 72);
+        margin-right: 50px;
+      }
+      #l1{
+        background-color: white;
+        margin-left: 50px;
+        margin-right: 560px;
+        font-size: 0.4rem;
+        padding-right: 33px;
+        color: white;
+        display: none;
+        margin-top: 7px;
+      }
+
+      #l2{
+        background-color: white;
+        margin-left: 200px;
+        margin-right: 400px;
+        font-size: 0.4rem;
+        padding-right: 43px;
+        color: white;
+        display: none;
+        margin-top: 7px;
+      }
+
+      #l3{
+        background-color: white;
+        margin-left: 363px;
+        margin-right: 197px;
+        font-size: 0.4rem;
+        padding-right: 71px;
+        color: white;
+        display: none;
+        margin-top: 7px;
+      }
+
+      #l4{
+        background-color: white;
+        margin-left: 564px;
+        margin-right: 50px;
+        font-size: 0.4rem;
+        padding-right: 32px;
+        color: white;
+        display: none;
+        margin-top: 7px;
+      }
+
+      #rnav {
+          display: flex;
+          padding: 10px;
+        }
+
+        #srnav {
+          display: none;
+          padding: 10px;
+        }
+
+        #rlist {
+          width: 100%;
+          display: none;
+          flex-direction: column;
+          height: 100%;
+          font-size: 0.9rem;
+          background-color: #aedd7f;
+          backdrop-filter: blur(20px);
+        }
+        .Links {
+          display: flex;
+          flex-direction: column;
+          margin: auto;
+        }
+
+        .a {
+          text-decoration: none;
+        }
+
+        li {
+          list-style-type: none;
+          display: flex;
+          padding: 20px;
+          gap: 10px;
+          color: #4d4e50;
+          align-items: center;
+          cursor: pointer;
+          position: relative;
+          transition-duration: 0.2s;
+          margin-right: 40px;
+          text-decoration: none;
+        }
+
+        div li:hover {
+          background-color: #4d4e50;
+          color: #7fc03d;
+        }
+      }
+
+      #jh {
+        display: flex;
+      }
+
+      #jh1{
+        background-color: #7FC03D;
+        margin-left: 765px;
+        font-size: 0.8rem;
+        font-weight: bold;
+        padding: 10px;
+        display: none;
+      }
+
+      #jh1 a {
+        margin-bottom: 10px;
+        display: block;
+        color: black;
+        text-decoration: none;
+      }
+
+      #jh1 a:hover {
+        color: white;
+      }
+
+      #jh2{
+        background-color: #7FC03D;
+        display: none;
+        margin-left: 932px;
+        font-size: 0.8rem;
+        font-weight: bold;
+        padding: 10px 40px;
+      }
+
+      #jh2 a {
+        margin-bottom: 10px;
+        display: block;
+        color: black;
+        text-decoration: none;
+      }
+
+      #jh2 a:hover {
+        color: white;
+      }
+
+
+      #jh3{
+        background-color: #7FC03D;
+        display: none;
+        margin-left: 1108px;
+        font-size: 0.8rem;
+        font-weight: bold;
+        padding: 10px 10px;
+      }
+
+      #jh3 a {
+        margin-bottom: 10px;
+        display: block;
+        color: black;
+        text-decoration: none;
+      }
+
+      #jh3 a:hover {
+        color: white;
+      }
+    .d1{
+        font-size: 70px;
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .d2{
+        font-size: xx-large;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .d3{
+        margin-left: 50%;
+        margin-top: 150px;
+        margin-bottom: 150px;
+        font-size: larger;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .d4{
+        margin: 100px;
+        height: 550px;
+        border-radius: 10px;
+    }
+    .d5{
+        font-size: larger;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        margin-left: 60px;  
+    }
+    .d7{
+        font-size: larger;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        margin-top: 200px;
+        margin-left: 60px;
+        margin-bottom: 100px;
+    }
+    .d8{
+        height: 700px;
+        margin-left: 100px;
+        border-radius: 10px;
+    }
+
+    @media (max-width: 768px) {
+  .d1{
+        font-size: 1rem;
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .d2{
+        font-size: 0.9rem;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .d3{
+        margin-left: 0%;
+        margin-top: 20px;
+        margin-bottom: 0px;
+        font-size: 0.8rem;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        padding: 20px;
+    }
+
+    .d4{
+        margin-left: 20px;
+        height: 85px;
+        border-radius: 5px;
+    }
+
+    .d5{
+        font-size: 0.8rem;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        margin-left: 0px;
+        padding: 20px;  
+    }
+
+    .d6{
+        font-size: 0.8rem;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        margin-top: 30px;
+        margin-left: 0px;
+        padding: 20px;
+    }
+
+    .d7{
+        font-size: 0.8rem;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        margin-top: 30px;
+        margin-left: 0px;
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+
+    .d8{
+        height: 140px;
+        margin-left: 20px;
+        border-radius: 5px;
+    }
+}
+
+    #fd {
+        background-color: rgb(76, 72, 72);
+        padding-bottom: 40px;
+        padding-top: 40px;
+        margin-top: 100px;
+      }
+
+      #fdd1 {
+        background-color: white;
+        margin-left: 565px;
+        margin-right: 620px;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 10px;
+        border-style: outset;
+        border-radius: 10px;
+      }
+      #fd1i {
+        height: 40px;
+      }
+     
+      .fd7 {
+        color: silver;
+        padding-left: 40px;
+      }
+      .fd8 {
+        display: flex;
+        padding-top: 40px;
+        margin-left: 600px;
+        margin-right: 500px;
+      }
+    
+      .fd8i{
+        font-weight: bolder;
+        font-size: 15px;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        color: silver;
+      }
+      *{
+        box-sizing: border-box;
+        margin: 0;
+      }
+
+      @media (max-width: 768px) {
+      #fd {
+        background-color: rgb(76, 72, 72);
+        padding-bottom: 40px;
+        padding-top: 40px;
+        margin-top: 100px;
+      }
+
+      #fdd1 {
+        background-color: white;
+        margin-left: 90px;
+        margin-right: 90px;
+        padding-left: 35px;
+        padding-right: 0px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-style: outset;
+        border-radius: 10px;
+      }
+      #fd1i {
+        height: 30px;
+      }
+     
+      .fd7 {
+        color: silver;
+        padding-left: 40px;
+        display: none;
+      }
+      .fd8 {
+        display: flex;
+        padding-top: 40px;
+        margin-left: 115px;
+        margin-right: 0px;
+      }
+    
+      .fd8i{
+        font-weight: bolder;
+        font-size: 15px;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        color: silver;
+      }
+      *{
+        box-sizing: border-box;
+        margin: 0;
+      }
+    }
+
+  </style>
+  <body>
+    <div class="pdiv">
+      <img src="new logo big.png" alt="img" class="logo" />
+      <div id="ppdiv">
+      <a href="index.html" id="ac" onmouseenter="navl1()" onmouseleave="navlb()">HOME</a>
+      <a href="" id="ac" onmouseenter="navl2()" onmouseleave="navlb()">LATEST</a>
+      <a href="" id="ac" onmouseenter="navl3()" onmouseleave="navlb()">EXPERIENCE</a>
+      <a href="" id="ac" onmouseenter="navl4()" onmouseleave="navlb()">BLOG</a>
+      <div>
+        <span id="l1">home</span>
+        <span id="l2">latest</span>
+        <span id="l3">experience</span>
+        <span id="l4">blog</span>
+      </div>
+    </div>
+    <div onclick="pay()" id="rnav">
+      <svg
+        id="opicon"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="#000000"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </div>
+    <div onclick="cod()" id="srnav">
+      <svg
+        id="exicon"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="#000000"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </div>
+    </div>
+    <div id="jh">
+      <div id="jh1"  onmouseleave="hh1()">
+        <a href="BMW.html">BMW XM</a>
+        <a href="Benz.html">Mercedes-AMG</a>
+        <a href="Lamb.html">URUS S</a>
+      </div>
+      <div id="jh2" onmouseleave="hh2()">
+        <a href="toyota.html">CAMRY</a>
+        <a href="Hyundai.html">HYUNDAI</a>
+        <a href="Tesla.html">TESLA</a>
+      </div>
+      <div id="jh3" onmouseleave="hh3()">
+        <a href="Space.html">SPACE</a>
+        <a href="App.html">APPS</a>
+        <a href="Transportation.html">TRANSPORTATION</a>
+      </div>
+    </div>
+    <div id="rlist">
+      <ul id="Links">
+        <a href="index.html" class="a">
+        <li>Home</li>
+      </a>
+      <a href="BMW.html" class="a">
+        <li>BMW XM</li>
+      </a>
+      <a href="Benz.html" class="a">
+        <li>Mercedes-AMG</li>
+      </a>
+      <a href="Lamb.html" class="a">
+        <li>Urus S</li>
+      </a>
+      <a href="toyota.html" class="a">
+        <li>Camry</li>
+      </a>
+      <a href="Hyundai.html" class="a">
+        <li>Hyundai</li>
+      </a>
+      <a href="Tesla.html" class="a">
+        <li>Tesla</li>
+      </a>
+      <a href="Space.html" class="a">
+        <li>Space</li>
+      </a>
+      <a href="App.html" class="a">
+        <li>App</li>
+      </a>
+      <a href="Transportation.html" class="a">
+        <li>Transportation</li>
+      </a>
+      </ul>
+    </div>
+    <div class="d1">Hyundai G80. Optical Technology</div>
+    <div class="d2">Advances in Automotive Safety and Convenience</div>
+    <div class="d3">
+      Optical technology is enriching our lives through constant evolution. The
+      <br />
+      same goes for the automobile industry. Here’s how advanced optical <br />
+      technology is improving safety and comfort in the automotive industry.
+      <br />
+      Intelligent headlamp system that even considers surrounding cars <br />
+      Digital Side Mirrors: A new trend in the era of electric vehicles <br />
+      Advanced driving technology perfected by cameras <br />
+      3D cluster: Magic of light that transforms 2D images to three-dimensional
+    </div>
+    <img src="hyundai blog 1.jpg" alt="" class="d4" />
+    <div class="d5">
+      Some say that the essence of a car is to go well, stand well, and turn
+      <br />
+      well. But it only describes one part of the car - movement. The safety of
+      <br />
+      occupants is as important as performance in a car. Occupants in small
+      <br />
+      spaces are easily exposed to danger in the event of an accident. In the
+      <br />
+      history of more than 100 years of automobiles, occupant safety has long
+      <br />
+      depended on rigid bodies, seat belts, and airbags. However, the latest
+      <br />
+      cutting-edge technology, which is being introduced rapidly, has remarkably
+      <br />
+      improved the safety of automobiles.
+    </div>
+    <div class="d7">
+      First of all, optical technology is contributing greatly to enhancing <br>
+      vehicle safety as well as convenience. Many people often think that <br>
+      optical technology means only lights such as headlamps and rear lamps. <br>
+      However, among optics-related technologies, the camera is showing the <br>
+      greatest potential for development in recent automobiles. Until recently, <br>
+      cameras were only used to record video or show the back of a car for <br>
+      parking, but with technological advances, cameras have begun to perform <br>
+      more diverse functions.
+    </div>
+    <img src="hyundai blog 2.jpg" alt="" class="d8">
+    <footer>
+        <div id="fd">
+            <div id="fdd1">
+              <img src="new logo big.png" alt="img" id="fd1i" />
+            </div>
+          <div class="fd7">
+            _____________________________________________________________________________________________________________________________________________________________
+          </div>
+          <div class="fd8">
+              <span class="fd8i">BIG © 2024</span>
+          </div>
+        </div>
+      </footer>
+  </body>
+</html>
